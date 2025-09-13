@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/8c/b3/e1/8cb3e1f245b9ce3a7eb44e15109646a3.jpg" type="image/x-icon">
+</head>
+<body>
+    
+    <main class="maincontainer">
+
+        <!--Head-->
+        
+        <header>
+            
+            <nav>
+                <h1>Weather App</h1>
+            </nav>
+            
+        </header>
+        
+        <!--Main-->
+        
+        <main>
+            
+            <div class="leftpanel">
+
+                
+                <section class="search">
+                    <input type="text" placeholder="Enter city Name" id="cityInput">
+                    <button id="searchBtn">Search</button>    
+                </section>
+                
+                <section id="currentWeather" class="card">
+                    <h2>City Name</h2>
+                    <p class="temp">°C</p>
+                    <p class="condition">Condtion</p>
+                    <img src="" alt="Weather-icon" id="weatherIcon">
+                </section>
+                
+                <section id="foreCast" class="foreCast">
+                    <h3>5 - Day ForeCast</h3>
+                    
+                    <div class="forecaseCards">
+                        
+                    </div>
+                </section>
+            </div>
+            
+            <section class="hidden" id="maptab">
+                <h3>Map</h3>
+                
+                <div id="map"></div>
+            </section>
+            
+        </main>
+        <footer>
+            <button id="weather" class="active">Weather</button>
+            <button id="mapTab">Map</button>
+        </footer>
+    </main>
+        <script src="style.js"></script>
+    </body>
+    </html>

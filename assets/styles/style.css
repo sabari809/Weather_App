@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c9bfbf;
+}
+
+.maincontainer{
+    padding: 0.2rem 0.4rem;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+header{
+    text-align: center;
+    padding: 1rem;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.search{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search input{
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.search button{
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.card{
+    text-align: center;
+    padding: 1rem;
+    background-color: violet;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+}
+
+.foreCast h3{
+    margin-bottom: 1rem;
+}
+
+.forecaseCards{
+    display: flex;
+    gap: 1rem;
+}
+
+.forecaseCards div{
+    flex: 0 0 auto;
+    width: 80px;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#map{
+    width: 100%;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-top: 1rem;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #0077b6;
+    border-radius: 12px;
+    position: sticky;
+}
+
+footer button{
+    flex: 1;
+    padding: 0.7rem;
+    background-color: transparent;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer.active{
+    background-color: grey;
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    .search{
+        justify-content: center;
+    }
+
+    .forecaseCards{
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    footer{
+        justify-content: space-evenly;
+    }
+
+    #map{
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    main{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .leftpanel{
+        flex: 1;
+    }
+
+    #maptab{
+        flex: 1;
+        display: block;
+    }
+
+    footer{
+        display: none
+    }
+
+    #map{
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+    }
+}
