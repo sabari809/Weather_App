@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <link rel="shortcut icon" href="https://i.pinimg.com/736x/8c/b3/e1/8cb3e1f245b9ce3a7eb44e15109646a3.jpg" type="image/x-icon">
 </head>
 <body>
@@ -29,7 +32,7 @@
 
                 
                 <section class="search">
-                    <input type="text" placeholder="Enter city Name" id="cityInput">
+                    <input type="text" placeholder="Enter city Name" id="cityInput" value="dindigul">
                     <button id="searchBtn">Search</button>    
                 </section>
                 
@@ -49,16 +52,16 @@
                 </section>
             </div>
             
-            <section class="hidden" id="maptab">
+            
+            <section id="maptab">
                 <h3>Map</h3>
                 
                 <div id="map"></div>
             </section>
-            
         </main>
         <footer>
             <button id="weather" class="active">Weather</button>
-            <button id="mapTab">Map</button>
+            <button id="mapbtn">Map</button>
         </footer>
     </main>
         <script src="style.js"></script>
