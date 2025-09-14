@@ -86,6 +86,8 @@ function displayForeWeather(data) {
     });
 }
 
+
+
 // map with leaflet js lib
 const map = L.map('map').setView([20,0],2)
 
