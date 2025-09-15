@@ -1,4 +1,4 @@
-const apiKey = API_KEY;
+const apiKey = "2633918cc900305f5d387f75934fc426";
 
 function debounce(func, delay) {
     let timeID;
@@ -62,14 +62,6 @@ function displayWeather(data) {
 
 async function foreCast(city) {
     try {
-        const res = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?q=London&appid=${apiKey}&units=metric`
-        );
-
-        if (!res.ok) throw new Error("Failed to fetch the forecast data");
-
-        const data = await res.json(); 
-        displayForeWeather(data);
 
         const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=London&appid=${apiKey}&units=metric`);
         if (!res.ok) throw new Error("Failed to fetch the forecast data");
@@ -85,17 +77,6 @@ function displayForeWeather(data) {
     const foreCastContainer = document.querySelector(".forecaseCards");
     foreCastContainer.innerHTML = "";
 
-
-    const dailyFore = data.list.filter(item => item.dt_txt.includes("12:00:00"));
-
-    dailyFore.forEach(day => {
-        const card = document.createElement("div");
-
-        const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: "short" });
-        const temp = Math.round(day.main.temp);
-        const icon = day.weather[0].icon;
-
-=======
     const dailyFore = data.list.filter(item => item.dt_txt.includes("12:00:00"));
     dailyFore.forEach(day => {
         const card = document.createElement("div");
@@ -108,10 +89,6 @@ function displayForeWeather(data) {
             <p>${temp}°C</p>
         `;
 
-        foreCastContainer.appendChild(card);
-    });
-}
-=======
         foreCastContainer.appendChild(card);
     });
 }
