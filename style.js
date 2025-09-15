@@ -1,4 +1,4 @@
-const apiKey = API_KEY;
+const apiKey = API_KEY ;
 
 function debounce(func, delay) {
     let timeID;
